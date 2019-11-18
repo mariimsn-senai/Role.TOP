@@ -8,23 +8,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="index.css" rel="stylesheet" type="text/css">
+
     <title>Roletop</title>
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
-    
-    @if(!"Home".Equals(nomeViews))
-    {
-    <link href="~/css/index.css" rel="stylesheet" type="text/css">;
 
-    }else{
-
-        <link href="~/css/pagamento.css" rel="stylesheet" type="text/css">;
-
-    }
 </head>
 
-
+    @if("Home".Equals(nomeViews))
+    {
+    <link href="~/css/index.css" rel="stylesheet" type="text/css">;
+    }else if("Casa".Equals(nomeViews))
+    {
+    <link href="~/css/casa.css" rel="stylesheet" type="text/css">;
+    }else if("FAQ".Equals(nomeViews))
+    {
+    <link href="~/css/FAQ.css" rel="stylesheet" type="text/css">;
+    }else if("Pacotes".Equals(nomeViews))
+    {
+    <link href="~/pacotes/css/.css" rel="stylesheet" type="text/css">;
+    }
 
     <section id=menu>
         <header>
@@ -47,20 +50,19 @@
                         </a>
                     </li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=index.html class="active">Home</a></li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Casa")#Casa'>Casa</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Casa" asp-action="Casa" class ="active">Casa</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "FAQ")#FAQ'>FAQ</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Pacotes")#Pacotes'>Pacotes</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Ambiente")#Ambiente'>Ambiente</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Contato")#Contato'>Contato</a></li>
+
                     
                 </ul>
                 <hr>
             </nav>
-                @if("Home".Equals(nomeViews))
-        {
-            Html.RenderPartial("_headerHomePage");
-        }
+
     </section>
+
         </header>
 
             @RenderBody()

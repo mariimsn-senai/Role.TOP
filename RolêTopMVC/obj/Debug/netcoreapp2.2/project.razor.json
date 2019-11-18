@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\44879682837\\Documents\\SPRIN4\\RolêTopMVC\\RolêTopMVC.csproj",
+  "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\RolêTopMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2971,11 +2971,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Casa\\Index.cshtml",
-      "TargetPath": "Views\\Casa\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -2988,6 +2983,11 @@
     {
       "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Casa\\casa.cshtml",
+      "TargetPath": "Views\\Casa\\casa.cshtml",
       "FileKind": "mvc"
     },
     {
