@@ -119,7 +119,7 @@ p{
   }
 
   body {
-    background-image: url('img/contato.foto/contato.foto.jpg');
+    background-image: url('../img/contato.foto/contato.foto.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

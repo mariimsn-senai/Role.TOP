@@ -13,32 +13,98 @@
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
 
-</head>
-
     @if("Home".Equals(nomeViews))
     {
-    <link href="~/css/index.css" rel="stylesheet" type="text/css">;
-    }else if("Casa".Equals(nomeViews))
-    {
-    <link href="~/css/casa.css" rel="stylesheet" type="text/css">;
-    }else if("FAQ".Equals(nomeViews))
-    {
-    <link href="~/css/FAQ.css" rel="stylesheet" type="text/css">;
-    }else if("Pacotes".Equals(nomeViews))
-    {
-    <link href="~/pacotes/css/.css" rel="stylesheet" type="text/css">;
+        <link href="~/css/index.css" rel="stylesheet" type="text/css">;
     }
+    else if("Casa".Equals(nomeViews))
+    {
+        <link href="~/css/casa.css" rel="stylesheet" type="text/css">;
+    }
+    else if("FAQ".Equals(nomeViews))
+    {
+        <link href="~/css/FAQ.css" rel="stylesheet" type="text/css">
+    }
+    else if("Pacote".Equals(nomeViews))
+    {
+        <link href="~/css/pacotes.css" rel="stylesheet" type="text/css">
+    }
+    else if("Ambiente".Equals(nomeViews))
+    {
+        <link href="~/css/ambiente.css" rel="stylesheet" type="text/css">
+        <link href="~/js/ambiente.js"  rel="stylesheet" type="text/css">
+        <script src=~/js/ambiente.js></script>
+        <script>
 
+
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+        </script>
+    }
+    else if("Contato".Equals(nomeViews))
+    {
+        <link href="~/css/contato.css" rel="stylesheet" type="text/css">
+    }
+    else if("Login".Equals(nomeViews))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    }
+    else if("LoginImg".Equals(nomeViews))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    }else if("Sucesso".Equals(nomeViews))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        
+    }else if("ADM".Equals(nomeViews))
+    {
+        <link href="~/css/adm.css" rel="stylesheet" type="text/css">
+    }
+</head>
+
+
+
+<body>
     <section id=menu>
         <header>
             <nav>
                 <div id=ima>
-                    <img src="img/ima/logo.png">
+                    <img src="~/img/ima/logo.png">
 
                     <div class="junto">
 
-                        <a href="login.html">login/cadastro</a>
-                        <a href="login.html"><img src="img/usuario/181549.svg" alt="usuario"></a>
+                        <a asp-controller="Login" asp-action="Login" class="active">login/cadastro</a>
+                        <a asp-controller="LoginImg" asp-action="LoginImg" class="active"><img src="~/img/usuario/181549.svg" alt="usuario"></a>
                     </div>
                 </div>
                 <hr>
@@ -49,12 +115,12 @@
                             <i class="fa fa-bars"></i>
                         </a>
                     </li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href=index.html class="active">Home</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Casa" asp-action="Casa" class ="active">Casa</a></li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "FAQ")#FAQ'>FAQ</a></li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Pacotes")#Pacotes'>Pacotes</a></li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Ambiente")#Ambiente'>Ambiente</a></li>
-                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Contato")#Contato'>Contato</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="FAQ" asp-action="FAQ" class="active">FAQ</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Pacote" asp-action="pacote" class="active">Pacotes</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Ambiente" asp-action="Ambiente" class="active">Ambiente</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Contato" asp-action="Contato" class="active">Contato</a></li>
 
                     
                 </ul>
@@ -64,8 +130,7 @@
     </section>
 
         </header>
-
-            @RenderBody()
+@RenderBody()
 
 <script>
         function toggleMobileMenu() {
@@ -97,7 +162,6 @@
 
     </script>
 
-
 <section>
  <div id=rodapé>
        <footer>
@@ -111,5 +175,11 @@
         </footer>
  </div>
     </section>
+    @if("Login".Equals(nomeViews) || "LoginImg".Equals(nomeViews))
+    {
+    <script type="text/javascript" src="~/js/login.js"></script>
 
+    }
+    
+</body>
 </html>

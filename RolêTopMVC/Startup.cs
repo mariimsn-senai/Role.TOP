@@ -33,8 +33,13 @@ namespace RolêTopMVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        }
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(15);
+                options.Cookie.IsEssential = true;
+            });
 
+    }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -52,6 +57,7 @@ namespace RolêTopMVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
@@ -60,5 +66,6 @@ namespace RolêTopMVC
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
-    }
+}
+
 }

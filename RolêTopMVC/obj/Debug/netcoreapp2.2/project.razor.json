@@ -2961,47 +2961,87 @@
   "RootNamespace": "RolêTopMVC",
   "Documents": [
     {
-      "FilePath": "Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Contato\\Contato.cshtml",
+      "TargetPath": "Views\\Contato\\Contato.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Shared\\Erro.cshtml",
+      "TargetPath": "Views\\Shared\\Erro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Pacote\\pacote.cshtml",
+      "TargetPath": "Views\\Pacote\\pacote.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Ambiente\\Ambiente.cshtml",
+      "TargetPath": "Views\\Ambiente\\Ambiente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Login\\Login.cshtml",
+      "TargetPath": "Views\\Login\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\FAQ\\FAQ.cshtml",
+      "TargetPath": "Views\\FAQ\\FAQ.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Shared\\Sucesso.cshtml",
+      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\LoginImg\\LoginImg.cshtml",
+      "TargetPath": "Views\\LoginImg\\LoginImg.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Casa\\casa.cshtml",
-      "TargetPath": "Views\\Casa\\casa.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Casa\\casa.cshtml",
+      "TargetPath": "Views\\Casa\\casa.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\ADM\\Adm.cshtml",
+      "TargetPath": "Views\\ADM\\Adm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Documents\\2s------Sprint4\\RolêTopMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     }
