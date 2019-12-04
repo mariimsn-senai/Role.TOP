@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link href="~/css/login.css" rel="stylesheet" type="text/css">
     <title>Roletop</title>
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
@@ -89,6 +89,9 @@ function showSlides(n) {
     }else if("ADM".Equals(nomeViews))
     {
         <link href="~/css/adm.css" rel="stylesheet" type="text/css">
+    }else if("Cliente".Equals(nomeViews))
+    {
+        <link href="~/css/adm.css" rel="stylesheet" type="text/css">
     }
 </head>
 
@@ -121,6 +124,7 @@ function showSlides(n) {
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Pacote" asp-action="pacote" class="active">Pacotes</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Ambiente" asp-action="Ambiente" class="active">Ambiente</a></li>
                     <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Contato" asp-action="Contato" class="active">Contato</a></li>
+
 
                     
                 </ul>

@@ -1,20 +1,26 @@
 using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Enums;
 using RolêTopMVC.Models;
 using RolêTopMVC.Repositorio;
+using RolêTopMVC.ViewModels;
 
 namespace RolêTopMVC.Controllers
 {
-    public class CadastroController : Controller
+    public class CadastroController : AbstractController
     {
         ClienteRepository clienteRepository = new ClienteRepository();
         public IActionResult Index()
         {    
-            return View();
+                return View(new BaseViewModel(){
+                NomeView = "Cadastro",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession() 
+            });
         }
 
-        public IActionResult CadastrarCliente(IFormCollection form)
+        public IActionResult CadastroCliente(IFormCollection form)
         {
             ViewData["Action"] = "Cadastro";
             try
@@ -29,14 +35,30 @@ namespace RolêTopMVC.Controllers
                     form["senha"]
                     );
                     
+                    cliente.TiposUsuario = (uint) TiposUsuario.CLIENTE;
+
                     clienteRepository.Inserir(cliente);
-                    return RedirectToAction("Sucesso","Sucesso");
+                    return View("Sucesso", new BaseViewModel()
+                    {
+                        NomeView = "Cadastro",
+                        UsuarioEmail = ObterUsuarioSession(),
+                        UsuarioNome = ObterUsuarioNomeSession()
+
+                    });
+
                 
 
             }catch(Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
-                return View("Erro");
+                return View("Erro" , new BaseViewModel()
+                {
+                    
+                        NomeView = "Cadastro",
+                        UsuarioEmail = ObterUsuarioSession(),
+                        UsuarioNome = ObterUsuarioNomeSession()
+                }
+                    );
 
             }
 

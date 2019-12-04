@@ -5,8 +5,7 @@ using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Repositorio
 {
-
-            public class PedidoRepository : RepositoryBaase
+    public class PedidoRepository : RepositoryBaase
     {
         private const string PATH = "Database/Pedidos.csv";
 
@@ -52,13 +51,15 @@ namespace RolêTopMVC.Repositorio
                 Pedido p = new Pedido();
 
                 p.Id = ulong.Parse(ExtrairValorDoCampo("id", l));
-                //p.Status = uint.Parse(ExtrairValorDoCampo("status_pedidos", l));
+                p.Status = uint.Parse(ExtrairValorDoCampo("status_pedidos", l));
                 p.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", l);
                 p.Cliente.Endereco = ExtrairValorDoCampo("cliente_endereco", l);
                 p.Cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", l);
                 p.Cliente.Email = ExtrairValorDoCampo("cliente_email", l);
-                p.Pacote.Nome = ExtrairValorDoCampo("pacote_nome", l);
-                p.Pacote.Preco = double.Parse(ExtrairValorDoCampo("pacote_preco", l));
+                p.Cliente.CPF = ExtrairValorDoCampo("cliente_CPF", l);
+                p.Pacote.Nome = ExtrairValorDoCampo("hamburguer_nome", l);
+                p.Pacote.Preco = double.Parse(ExtrairValorDoCampo("hamburguer_preco", l));
+                p.PrecoTotal = double.Parse(ExtrairValorDoCampo("preco_total", l));
                 p.DataDoPedido = DateTime.Parse(ExtrairValorDoCampo("data_pedido", l));
 
                 pedidos.Add(p);
@@ -112,10 +113,10 @@ namespace RolêTopMVC.Repositorio
         private string PrepararPedidoCSV(Pedido p)
         {
             Cliente c = p.Cliente;
-            Pacote P = p.Pacote;
-            //status_pedidos={p.Status}
+            Pacote pa = p.Pacote;
+            
 
-            return $"id={p.Id};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};pacote_nome={P.Nome};pacote_preco={P.Preco};data_pedido={p.DataDoPedido};";
+            return $"id={p.Id};status_pedidos={p.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};cliente_CPF={c.CPF};Pacote_nome={pa.Nome};Pacote_preco={pa.Preco};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal}";
         }
     }
-    }
+}
