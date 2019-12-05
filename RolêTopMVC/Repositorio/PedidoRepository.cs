@@ -48,7 +48,7 @@ namespace RolêTopMVC.Repositorio
             List<Pedido> pedidos = new List<Pedido>();
             foreach (var l in linhas)
             {
-                Pedido p = new Pedido();
+                Pedido p = new pedido();
 
                 p.Id = ulong.Parse(ExtrairValorDoCampo("id", l));
                 p.Status = uint.Parse(ExtrairValorDoCampo("status_pedidos", l));
@@ -58,7 +58,7 @@ namespace RolêTopMVC.Repositorio
                 p.Cliente.Email = ExtrairValorDoCampo("cliente_email", l);
                 p.Cliente.CPF = ExtrairValorDoCampo("cliente_CPF", l);
                 p.Pacote.Nome = ExtrairValorDoCampo("hamburguer_nome", l);
-                p.Pacote.Preco = double.Parse(ExtrairValorDoCampo("hamburguer_preco", l));
+                p.Pacote.Valor = double.Parse(ExtrairValorDoCampo("hamburguer_valor", l));
                 p.PrecoTotal = double.Parse(ExtrairValorDoCampo("preco_total", l));
                 p.DataDoPedido = DateTime.Parse(ExtrairValorDoCampo("data_pedido", l));
 
@@ -116,7 +116,7 @@ namespace RolêTopMVC.Repositorio
             Pacote pa = p.Pacote;
             
 
-            return $"id={p.Id};status_pedidos={p.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};cliente_CPF={c.CPF};Pacote_nome={pa.Nome};Pacote_preco={pa.Preco};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal}";
+            return $"id={p.Id};status_pedidos={p.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};cliente_CPF={c.CPF};Pacote_nome={pa.Nome};Pacote_valor={pa.Valor};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal}";
         }
     }
 }
