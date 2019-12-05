@@ -18,7 +18,7 @@ namespace RolêTopMVC.Repositorio
 
                 if(item.Nome.Equals(nomePacote))
                 {
-                    preco = item.Preco;
+                    //preco = item.Preco;
                     break;
                 }
             }
@@ -35,7 +35,7 @@ namespace RolêTopMVC.Repositorio
                 Pacote P = new Pacote();
                 string[] dados = linha.Split(";");
                 P.Nome = dados[0];
-                P.Preco = double.Parse(dados[1]);
+                P.valor = double.Parse(dados[1]);
                 pacote.Add(P);
                 
             }
