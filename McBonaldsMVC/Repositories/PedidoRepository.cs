@@ -89,10 +89,10 @@ namespace McBonaldsMVC.Repositories
             var pedidoCSV = PrepararPedidoCSV(pedido);
             var linhaPedido = -1;
             var resultado = false;
-            
+
             for (int i = 0; i < pedidosTotais.Length; i++)
             {
-                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id", pedidosTotais[i]));
+                var idConvertido = ulong.Parse(ExtrairValorDoCampo("id" , pedidosTotais[i]));
                 if(pedido.Id.Equals(idConvertido))
                 {
                     linhaPedido = i;
@@ -100,7 +100,7 @@ namespace McBonaldsMVC.Repositories
                     break;
                 }
             }
-
+            
             if(resultado)
             {
                 pedidosTotais[linhaPedido] = pedidoCSV;
@@ -108,14 +108,17 @@ namespace McBonaldsMVC.Repositories
             }
 
             return resultado;
+
         }
 
-        private string PrepararPedidoCSV (Pedido pedido) {
-            Cliente c = pedido.Cliente;
-            Hamburguer h = pedido.Hamburguer;
-            Shake s = pedido.Shake;
 
-            return $"id={pedido.Id};status_pedido={pedido.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};hamburguer_nome={h.Nome};hamburguer_preco={h.Preco};shake_nome={s.Nome};shake_preco={s.Preco};data_pedido={pedido.DataDoPedido};preco_total={pedido.PrecoTotal}";
+        private string PrepararPedidoCSV(Pedido p)
+        {
+            Cliente c = p.Cliente;
+            Hamburguer h = p.Hamburguer;
+            Shake s = p.Shake;
+
+            return $"id={p.Id};status_pedidos={p.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};hamburguer_nome={h.Nome};hamburguer_preco={h.Preco};shake_nome={s.Nome};shake_preco={s.Preco};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal}";
         }
     }
 }

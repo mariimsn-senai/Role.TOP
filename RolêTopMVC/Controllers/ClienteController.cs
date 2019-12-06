@@ -88,7 +88,7 @@ namespace RolêTopMVC.Controllers
 
             return View(new HistoricoViewModel()
             {
-                Pedidos = pedidosCliente,
+                //Pedidos = pedidosCliente,
                 NomeView = "Histórico",
                 UsuarioEmail = ObterUsuarioSession(),
                 UsuarioNome = ObterUsuarioNomeSession()

@@ -25,23 +25,5 @@ namespace RolêTopMVC.Repositorio
                 return preco;
         }
 
-        public List<Pacote> ObterTodos()
-        {
-            List<Pacote> pacote = new List<Pacote>();
-            string[] linhas = File.ReadAllLines(PATH);
-
-            foreach (var linha in linhas)
-            {
-                Pacote P = new Pacote();
-                string[] dados = linha.Split(";");
-                P.Nome = dados[0];
-                P.valor = double.Parse(dados[1]);
-                pacote.Add(P);
-                
-            }
-
-            return pacote;
-
         }
     }
-}

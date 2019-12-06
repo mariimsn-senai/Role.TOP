@@ -1,3 +1,5 @@
+using System;
+
 namespace RolêTopMVC.Models
 {
     public class PacotePadrao : Produto

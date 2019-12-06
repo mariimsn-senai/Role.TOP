@@ -111,7 +111,6 @@ namespace RolêTopMVC.Repositorio
         private string PrepararPedidoCSV(Pedido p)
         {
             Cliente c = p.Cliente;
-            Pacote pa = p.Pacote;
             
 
             return $"id={p.Id};status_pedidos={p.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};cliente_CPF={c.CPF};data_pedido={p.DataDoPedido};preco_total={p.PrecoTotal}";

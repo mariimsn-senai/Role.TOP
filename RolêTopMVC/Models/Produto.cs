@@ -5,6 +5,7 @@ namespace RolêTopMVC.Models
 {
     public class Produto
     {
+        public ulong Id {get;set;}
         public string Nome {get;set;}
         public double Valor {get;set;}
         public string luz {get;set;}
@@ -13,6 +14,7 @@ namespace RolêTopMVC.Models
         public string data {get;set;}
         
         public string horario {get;set;}
+        public uint lolo {get;set;}
 
         public Produto()
         {
