@@ -11,6 +11,7 @@ namespace RolêTopMVC.Models
             this.luz = "SIM";
             this.som = "NÃO";
             this.data = DateTime.Now.ToString();
+            this.Id = 2;
         }
     }
 }

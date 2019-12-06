@@ -11,55 +11,34 @@ using static RolêTopMVC.ViewModels.PedidoViewModel;
 namespace RolêTopMVC.Controllers
 {
 
-public class PedidoController : AbstractController
-{
-    ClienteRepository clienteRepository = new ClienteRepository();
-    PedidoRepository pedidoRepository = new PedidoRepository();
-    PacotesRepository pacotesRepository = new PacotesRepository();
-
-    public IActionResult Pacotes()
+    public class PedidoController : AbstractController
     {
+        ClienteRepository clienteRepository = new ClienteRepository();
+        PedidoRepository pedidoRepository = new PedidoRepository();
+        
 
-    var ninguemLogdado = string.IsNullOrEmpty(ObterUsuarioTipoSession());
-    if (!ninguemLogdado)
+
+        public IActionResult Registrar(ulong id)
+        {
+            AgendamentoViewModel agendamentoViewModel= new AgendamentoViewModel();
+
+            switch (id)
             {
-
-            var produtos = pedidoRepository.ObterTodos();
-            PedidoViewModel PedidoViewModel = new PedidoViewModel();
-
-            foreach ( var produto in produtos)
-            {
-                switch(produto.ValorPacote)
-                {
-                    case (uint) ValorPacotes.PacoteSimples:
-                        PedidoViewModel.PacoteSimples++;
-                        PedidoViewModel.Produtos.Add(produto);
+                case (uint)ValorPacotes.PacoteSimples:
+                    PacoteSimples ps = new PacoteSimples();
+                    agendamentoViewModel.PacoteSimples = ps;
                     break;
-                    case (uint) ValorPacotes.PacotePadrao:
-                        PedidoViewModel.PacotePadrao++;
-                        PedidoViewModel.Produtos.Add(produto);
+                case (uint)ValorPacotes.PacotePadrao:
+                    PacotePadrao pp = new PacotePadrao();
+                    agendamentoViewModel.PacotePadrao = pp;
                     break;
-                    case (uint) ValorPacotes.PacotePremium:
-                        PedidoViewModel.PacotePremium++;
-                        PedidoViewModel.Produtos.Add(produto);
-                        //deixar na lista de pedido pendente
+                case (uint)ValorPacotes.PacotePremium:
+                    PacotePremium prep = new PacotePremium();
+                    agendamentoViewModel.PacotePremium = prep;
                     break;
-                }
             }
-            PedidoViewModel.NomeView = "Pacotes";
-            return View();
-            }
+            return RedirectToAction("Index","Agendamento", agendamentoViewModel);
+        }
 
     }
-
-    
-    public IActionResult Registrar (ulong id)
-    {
-        var produto = pedidoRepository.ObterPor(id);
-    }
-
-
-
-
-}
 }

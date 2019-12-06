@@ -11,6 +11,7 @@ namespace RolêTopMVC.Models
             this.luz = luz;
             this.som = som;
             this.data = DateTime.Now.ToString();
+            this.Id = 3;
         }
     }
 }

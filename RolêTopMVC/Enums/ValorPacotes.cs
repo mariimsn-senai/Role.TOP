@@ -3,9 +3,9 @@ namespace RolêTopMVC.Enums
     public enum ValorPacotes : uint
     
     {
-        PacoteSimples = 0,
-        PacotePadrao = 1,
-        PacotePremium = 2
+        PacoteSimples = 1,
+        PacotePadrao = 2,
+        PacotePremium = 3
     }
     
 }

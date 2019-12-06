@@ -5,7 +5,7 @@
                     <h1>Pacotes</h1>
                 </div>
             
-            <a href='@Url.Action("Registrar", "Pedido", new {id = @produto.Id})' method="GET" class="pacotes">
+            <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacoteSimples})' method="GET" class="pacotes">
                     <label class="tex" for="PacoteSimples"></div>
                         <p>   
                         <b><label class="tex" for="PacoteSimples" >Pacote Simples</label></b>
@@ -25,7 +25,7 @@
                     </div>
                     </a>
                     
-                    <a href='@Url.Action("Registrar", "Pedido", new {id = @produto.Id})' method="GET" class="pacotes">
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacotePadrao})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePadrao"></div>
                         <p>
                         <b><label class="tex" for="PacotePadrao" >Pacote Padrao</label></b>
@@ -46,7 +46,7 @@
                     </div>
                     </a>
         
-                    <a href='@Url.Action("Pacotes", "Pedido", new {@Model.PacotePremium})' method="GET" class="pacotes">
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacotePremium})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePremium"></div>
                         <p>
                         <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>
