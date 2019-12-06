@@ -1,4 +1,4 @@
-
+@model RolêTopMVC.ViewModels.PedidoViewModel
 <main>
             <section id="tudo">
                 <div>
@@ -46,7 +46,7 @@
                     </div>
                     </a>
         
-                    <a href='@Url.Action("Pacotes", "Pedido", new {id = @produto.Id})' method="GET" class="pacotes">
+                    <a href='@Url.Action("Pacotes", "Pedido", new {@Model.PacotePremium})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePremium"></div>
                         <p>
                         <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>

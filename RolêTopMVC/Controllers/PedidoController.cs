@@ -51,6 +51,8 @@ public class PedidoController : AbstractController
             }
 
     }
+
+    
     public IActionResult Registrar (ulong id)
     {
         var produto = pedidoRepository.ObterPor(id);
