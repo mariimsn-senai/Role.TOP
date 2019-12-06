@@ -5,7 +5,7 @@
                     <h1>Pacotes</h1>
                 </div>
             
-            <form action="" method="POST" class="pacotes">
+            <a href='@Url.Action("Registrar", "Pedido", new {id = @pedido.Id})' method="GET" class="pacotes">
                     <label class="tex" for="PacoteSimples"></div>
                         <p>   
                         <b><label class="tex" for="PacoteSimples" >Pacote Simples</label></b>
@@ -20,12 +20,12 @@
                         <p>Valor:10,000R$</p>
                         <br>
                         <br>
-                        <input type="submit" class="compra" name="comprar"><b>Compre já!</a></b></div> 
+                        <input type="submit" class="compra"><b>Compre já!</a></b></div> 
                         </p>
                     </div>
-                    </form>
+                    </a>
                     
-                    <form action="" method="POST" class="pacotes">
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @pedido.Id})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePadrao"></div>
                         <p>
                         <b><label class="tex" for="PacotePadrao" >Pacote Padrao</label></b>
@@ -42,11 +42,11 @@
                         <p>Valor: 15,000R$</p>
                         <br>
                         <br>
-                        <input type="submit" class="compra" name="comprar"><b>Compre já!</a></b></div> 
+                        <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
                     </div>
-                    </form>
+                    </a>
         
-                    <form action="" method="POST" class="pacotes">
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @pedido.Id})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePremium"></div>
                         <p>
                         <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>
@@ -63,9 +63,9 @@
                         <p>Valor: 20,000R$</p>
                         <br>
                         <br>
-                        <input type="submit" class="compra" name="comprar"><b>Compre já!</a></b></div> 
+                        <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
                         </div> 
-                        </form>
+                        </a>
                     </div> 
                 </div>
             </section>

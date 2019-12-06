@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult Login()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Login";
             return View();

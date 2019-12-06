@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class Clientee2Controller : Controller
     {
-        public IActionResult Cliente()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Cliente";
             return View();

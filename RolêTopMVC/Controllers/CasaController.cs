@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class CasaController : Controller
     {
-        public IActionResult casa()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Casa";
             return View();

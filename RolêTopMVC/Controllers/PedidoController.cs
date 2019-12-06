@@ -9,124 +9,69 @@ using RolêTopMVC.ViewModels;
 namespace RolêTopMVC.Controllers
 {
 
-    public class PedidoController : AbstractController
+public class PedidoController : AbstractController
+{
+    ClienteRepository clienteRepository = new ClienteRepository();
+    PedidoRepository pedidoRepository = new PedidoRepository();
+    PacotesRepository pacotesRepository = new PacotesRepository();
+    public IActionResult Index()
     {
-        ClienteRepository clienteRepository = new ClienteRepository();
-        PedidoRepository pedidoRepository = new PedidoRepository();
-        PacotesRepository pacotesRepository = new PacotesRepository();
-        public IActionResult Index()
+
+        PedidoViewModel pvm = new PedidoViewModel();
+        pvm.Pacote = pacotesRepository.ObterTodos();
+
+        var usuarioLogado = ObterUsuarioSession();
+        var nomeUsuarioLogado = ObterUsuarioNomeSession();
+        if (!string.IsNullOrEmpty(nomeUsuarioLogado))
         {
-
-            PedidoViewModel pvm = new PedidoViewModel();
-            pvm.Pacote = pacotesRepository.ObterTodos();
-
-            var usuarioLogado = ObterUsuarioSession();
-            var nomeUsuarioLogado = ObterUsuarioNomeSession();
-            if (!string.IsNullOrEmpty(nomeUsuarioLogado))
-            {
-                pvm.NomeCliente = nomeUsuarioLogado;
-            }
-            var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
-            if (clienteLogado != null)
-            {
-                pvm.Cliente = clienteLogado;
-            }
-            pvm.NomeView = "Pedido";
-            pvm.UsuarioEmail = usuarioLogado;
-            pvm.UsuarioNome = nomeUsuarioLogado;
-
-            return View(pvm);
+            pvm.NomeCliente = nomeUsuarioLogado;
         }
-        public IActionResult Registrar(IFormCollection form)
+        var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
+        if (clienteLogado != null)
         {
-            List<Produto> listaPacotes = new List<Produto>();
-            ViewData["Action"] = "Pedido";
-            Pedido pedido = new Pedido();
-            var nomePacote = form["pacote"];
-            // Pacote pacote = new Pacote (nomePacote,pacotesRepository.ObterPrecoDe(nomePacote));
-
-            PacoteSimples ps = new PacoteSimples();
-
-            agendamento agendamento = new agendamento();
-
-
-
-            Cliente cliente = new Cliente()
-            {
-                Nome = form["nome"],
-                Endereco = form["endereco"],
-                Telefone = form["telefone"],
-                Email = form["email"]
-
-            };
-
-
-            pedido.Cliente = cliente;
-
-            pedido.DataDoPedido = DateTime.Now;
-
-
-            if (pedidoRepository.Inserir(pedido))
-            {
-                return View("Sucesso", new RespostasViewModel()
-                {
-                    NomeView = "Pedido",
-                    UsuarioEmail = ObterUsuarioSession(),
-                    UsuarioNome = ObterUsuarioNomeSession()
-                });
-
-            }
-            else
-            {
-                return View("Erro", new RespostasViewModel()
-                {
-                    NomeView = "Pedido",
-                    UsuarioEmail = ObterUsuarioSession(),
-                    UsuarioNome = ObterUsuarioNomeSession()
-                });
-
-
-            }
+            pvm.Cliente = clienteLogado;
         }
+        pvm.NomeView = "Pedido";
+        pvm.UsuarioEmail = usuarioLogado;
+        pvm.UsuarioNome = nomeUsuarioLogado;
 
-        //uint é todos os numeros sem os negativos
-        //codigo de pedido de aprovação e negação de pedido
-        public IActionResult Aprovar(ulong id)
-        {
-            var pedido = pedidoRepository.ObterPor(id);
+        return View(pvm);
+    //}
+    //public IActionResult Registrar(IFormCollection form)
+    //{
+        //List<Produto> listaPacotes = new List<Produto>();
+        //ViewData["Action"] = "Pedido";
+        //Pedido pedido = new Pedido();
+        //var nomePacote = form["pacote"];
+        // Pacote pacote = new Pacote (nomePacote,pacotesRepository.ObterPrecoDe(nomePacote));
 
-            if (pedidoRepository.Atualizar(pedido))
-            {
-                return RedirectToAction("Adm", "Adm");
-            }
-            else
-            {
-                return View("Erro", new RespostasViewModel("Não foi possível aprovar este pedido")
-                {
-                    NomeView = "Adm",
-                    UsuarioEmail = ObterUsuarioSession(),
-                    UsuarioNome = ObterUsuarioNomeSession()
-                });
-            }
-        }
+        //PacoteSimples ps = new PacoteSimples();
 
-        public IActionResult Reprovar(ulong id)
-        {
-            var pedido = pedidoRepository.ObterPor(id);
+        //agendamento agendamento = new agendamento();
 
-            if (pedidoRepository.Atualizar(pedido))
-            {
-                return RedirectToAction("Adm", "Adm");
-            }
-            else
-            {
-                return View("Erro", new RespostasViewModel("Não foi possível reprovar este pedido")
-                {
-                    NomeView = "Adm",
-                    UsuarioEmail = ObterUsuarioSession(),
-                    UsuarioNome = ObterUsuarioNomeSession()
-                });
-            }
-        }
+
+
+        // Cliente cliente = new Cliente()
+        //{
+            //  Nome = form["nome"],
+            //Endereco = form["endereco"],
+            //Telefone = form["telefone"],
+            //Email = form["email"]
+
+        //};
+
+    //uint é todos os numeros sem os negativos
+    //codigo de pedido de aprovação e negação de pedido
+
+        // }
+
     }
+
+    public IActionResult Registrar (ulong id)
+    {
+        
+    }
+
+}
+
 }

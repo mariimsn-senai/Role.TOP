@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class AdmController : Controller
     {
-        public IActionResult Adm()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "ADM";
             return View();

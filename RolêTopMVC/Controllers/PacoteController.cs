@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class PacoteController : Controller
     {
-        public IActionResult pacote()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Pacote";
             return View();

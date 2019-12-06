@@ -4,15 +4,11 @@ namespace RolêTopMVC.Models
     {
         public PacotePadrao()
         {
-
-        }
-
-        public PacotePadrao(string Nome, double Valor, string luz, string som)
-        {
             this.Nome = "Pacote Simples";
             this.Valor = 10000;
             this.luz = luz;
             this.som = som;
+            this.data = DateTime.Now.ToString();
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace RolêTopMVC.Models
 {
-    public class agendamento : Produto
+    public class Agendamento : Produto
     {
         public agendamento(string data, string horario)
         {

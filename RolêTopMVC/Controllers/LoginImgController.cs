@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class LoginImgController : Controller
     {
-        public IActionResult LoginImg()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "LoginImg";
             return View();

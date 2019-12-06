@@ -4,15 +4,11 @@ namespace RolêTopMVC.Models
     {
         public PacotePremium()
         {
-
-        }
-
-        public PacotePremium(string Nome, double Valor, string luz, string som)
-        {
             this.Nome = "Pacote Premium";
             this.Valor = 10000;
             this.luz = "SIM";
             this.som = "NÃO";
+            this.data = DateTime.Now.ToString();
         }
     }
 }

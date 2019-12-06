@@ -5,7 +5,7 @@ namespace RolêTopMVC.Controllers
     public class ContatoController : Controller
     {
         
-        public IActionResult Contato()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Contato";
             return View();

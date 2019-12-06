@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class FAQController : Controller
     {
-        public IActionResult FAQ()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "FAQ";
             return View();

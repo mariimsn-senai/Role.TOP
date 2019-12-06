@@ -49,13 +49,13 @@ namespace RolêTopMVC.Controllers
                                 HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_NOME, c.Nome);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, c.TiposUsuario.ToString());
-                                return RedirectToAction("Cliente", "Clientee2");        
+                                return RedirectToAction("Index", "Clientee2");        
                             
                             default:
                                 HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_NOME, c.Nome);
                                 HttpContext.Session.SetString(SESSION_CLIENTE_TIPO, c.TiposUsuario.ToString());
-                                return RedirectToAction("Adm", "Adm");
+                                return RedirectToAction("Index", "Adm");
                         }
 
 

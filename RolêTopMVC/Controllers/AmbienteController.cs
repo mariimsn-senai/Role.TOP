@@ -4,7 +4,7 @@ namespace RolêTopMVC.Controllers
 {
     public class AmbienteController : Controller
     {
-        public IActionResult Ambiente()
+        public IActionResult Index()
         {
             ViewData["NomeView"] = "Ambiente";
             return View();
