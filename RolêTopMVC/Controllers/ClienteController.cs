@@ -11,7 +11,7 @@ namespace RolêTopMVC.Controllers
     {
 
         private ClienteRepository clienteRepository = new ClienteRepository();
-        private PedidoRepository pedidoRepository = new PedidoRepository();
+        
 
         [HttpGet]
         public IActionResult Login()
@@ -81,19 +81,6 @@ namespace RolêTopMVC.Controllers
 
         }
 
-        public IActionResult Historico ()
-        {
-            var emailCliente = ObterUsuarioSession();
-            var pedidosCliente = pedidoRepository.ObterTodosPorCliente(emailCliente);
-
-            return View(new HistoricoViewModel()
-            {
-                //Pedidos = pedidosCliente,
-                NomeView = "Histórico",
-                UsuarioEmail = ObterUsuarioSession(),
-                UsuarioNome = ObterUsuarioNomeSession()
-            });
-        }
                 public IActionResult Logoff()
         {
             HttpContext.Session.Remove(SESSION_CLIENTE_EMAIL);

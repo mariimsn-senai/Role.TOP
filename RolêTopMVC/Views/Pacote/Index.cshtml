@@ -1,11 +1,10 @@
-@model RolêTopMVC.ViewModels.PedidoViewModel
+@model RolêTopMVC.ViewModels.PacoteViewModel
 <main>
             <section id="tudo">
                 <div>
                     <h1>Pacotes</h1>
                 </div>
-            
-            <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacoteSimples})' method="GET" class="pacotes">
+                    
                     <label class="tex" for="PacoteSimples"></div>
                         <p>   
                         <b><label class="tex" for="PacoteSimples" >Pacote Simples</label></b>
@@ -20,12 +19,12 @@
                         <p>Valor:10,000R$</p>
                         <br>
                         <br>
+            <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacoteSimples})' method="GET" class="pacotes">
                         <input type="submit" class="compra"><b>Compre já!</a></b></div> 
                         </p>
                     </div>
                     </a>
                     
-                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacotePadrao})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePadrao"></div>
                         <p>
                         <b><label class="tex" for="PacotePadrao" >Pacote Padrao</label></b>
@@ -42,11 +41,11 @@
                         <p>Valor: 15,000R$</p>
                         <br>
                         <br>
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePadrao})' method="GET" class="pacotes">
                         <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
                     </div>
                     </a>
         
-                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.PacotePremium})' method="GET" class="pacotes">
                     <label class="tex" for="PacotePremium"></div>
                         <p>
                         <b><label class="tex" for="PacotePremium" >Pacote Premium</label></b>
@@ -63,6 +62,7 @@
                         <p>Valor: 20,000R$</p>
                         <br>
                         <br>
+                    <a href='@Url.Action("Registrar", "Pedido", new {id = @Model.CodigoPacotePremium})' method="GET" class="pacotes">
                         <input type="submit" class="compra" ><b>Compre já!</a></b></div> 
                         </div> 
                         </a>

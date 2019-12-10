@@ -1,2 +1,4 @@
 tipo_usuario=0;nome=Israel Oliveira;idade=10/03/2000;email=israa@bool.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=445637288198;senha=asd;
 tipo_usuario=1;nome=Olavo da Silva;idade=10/03/2000;email=ooo@bool.com;telefone=11 70706070;endereco=rua jsdjasd 121;CPF=12345678901;senha=123456;
+tipo_usuario=1;nome=marina souza;idade=10/03/2000;email=teste12@email.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=123456;
+tipo_usuario=1;nome=teste8;idade=10/03/2000;email=teste12@email.com;telefone=11 9525255252;endereco=rua jsdjasd 121;CPF=123123;senha=ma;

@@ -1,6 +1,5 @@
-﻿@{
-    var nomeViews = (string) ViewData["NomeView"];
-}
+﻿@model RolêTopMVC.Models.AgendamentoViewModel
+
 <!DOCTYPE html>
 <html lang="br-pt">
 
@@ -13,23 +12,23 @@
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
     <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
 
-    @if("Home".Equals(nomeViews))
+    @if("Home".Equals(@Model.NomeView))
     {
         <link href="~/css/index.css" rel="stylesheet" type="text/css">;
     }
-    else if("Casa".Equals(nomeViews))
+    @if("Casa".Equals(@Model.NomeView))
     {
         <link href="~/css/casa.css" rel="stylesheet" type="text/css">;
     }
-    else if("FAQ".Equals(nomeViews))
+    @if("FAQ".Equals(@Model.NomeView))
     {
         <link href="~/css/FAQ.css" rel="stylesheet" type="text/css">
     }
-    else if("Pacote".Equals(nomeViews))
+    @if("Pacote".Equals(@Model.NomeView))
     {
         <link href="~/css/pacotes.css" rel="stylesheet" type="text/css">
     }
-    else if("Ambiente".Equals(nomeViews))
+    @if("Ambiente".Equals(@Model.NomeView))
     {
         <link href="~/css/ambiente.css" rel="stylesheet" type="text/css">
         <link href="~/js/ambiente.js"  rel="stylesheet" type="text/css">
@@ -69,30 +68,42 @@ function showSlides(n) {
 }
         </script>
     }
-    else if("Contato".Equals(nomeViews))
+    @if("Contato".Equals(@Model.NomeView))
     {
         <link href="~/css/contato.css" rel="stylesheet" type="text/css">
     }
-    else if("Login".Equals(nomeViews))
+    @if("Login".Equals(@Model.NomeView))
     {
         <link href="~/css/login.css" rel="stylesheet" type="text/css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     }
-    else if("LoginImg".Equals(nomeViews))
+    @if("LoginImg".Equals(@Model.NomeView))
     {
         <link href="~/css/login.css" rel="stylesheet" type="text/css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    }else if("Sucesso".Equals(nomeViews))
+    }@if("Sucesso".Equals(@Model.NomeView))
     {
         <link href="~/css/login.css" rel="stylesheet" type="text/css">
         
-    }else if("Adm".Equals(nomeViews))
+    }@if("ADM".Equals(@Model.NomeView))
     {
         <link href="~/css/adm.css" rel="stylesheet" type="text/css">
-    }else if("Clientee2".Equals(nomeViews))
+    }@if("Clientee2".Equals(@Model.NomeView))
     {
         <link href="~/css/adm.css" rel="stylesheet" type="text/css">
+    }@if("Agendamento".Equals(@Model.NomeView))
+    {
+        <link href="~/css/agendamento.css" rel="stylesheet" type="text/css">
+    }@if("Pagamento".Equals(@Model.NomeView))
+    {
+        <link href="~/css/pagamentos.css" rel="stylesheet" type="text/css">
+    }@if("Erro".Equals(@Model.NomeView))
+    {
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
     }
+
+    
+
 </head>
 
 
@@ -106,8 +117,8 @@ function showSlides(n) {
 
                     <div class="junto">
 
-                        <a asp-controller="Login" asp-action="Login" class="active">login/cadastro</a>
-                        <a asp-controller="LoginImg" asp-action="LoginImg" class="active"><img src="~/img/usuario/181549.svg" alt="usuario"></a>
+                        <a asp-controller="Login" asp-action="Index" class="active">login/cadastro</a>
+                        <a asp-controller="LoginImg" asp-action="Index" class="active"><img src="~/img/usuario/181549.svg" alt="usuario"></a>
                     </div>
                 </div>
                 <hr>
@@ -134,7 +145,7 @@ function showSlides(n) {
     </section>
 
         </header>
-@RenderBody()
+        @RenderBody()
 
 <script>
         function toggleMobileMenu() {
@@ -179,7 +190,7 @@ function showSlides(n) {
         </footer>
  </div>
     </section>
-    @if("Login".Equals(nomeViews) || "LoginImg".Equals(nomeViews))
+    @if("Login".Equals(@Model.NomeView) || "LoginImg".Equals(@Model.NomeView))
     {
     <script type="text/javascript" src="~/js/login.js"></script>
 

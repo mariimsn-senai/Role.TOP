@@ -1,13 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Models;
+using RolêTopMVC.ViewModels;
 
 namespace RolêTopMVC.Controllers
 {
     public class SucessoController : Controller
     {
-    public IActionResult Sucesso()
+
+        public IActionResult Index()
         {
-            ViewData["NomeView"] = "Sucesso";
-            return View();
+            return View(new RespostasViewModel (){
+                NomeView = "Sucesso"
+            });
         }
     }
 }

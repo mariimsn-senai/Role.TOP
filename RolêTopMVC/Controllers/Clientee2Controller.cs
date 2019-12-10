@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Controllers
 {
@@ -6,8 +7,9 @@ namespace RolêTopMVC.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["NomeView"] = "Cliente";
-            return View();
+            return View(new AgendamentoViewModel (){
+                NomeView = "Cliente"
+            });
         }
     }
 }

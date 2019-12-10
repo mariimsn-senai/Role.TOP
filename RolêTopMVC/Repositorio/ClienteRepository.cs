@@ -33,7 +33,7 @@ namespace RolêTopMVC.Repositorio
                 {
                     Cliente c = new Cliente();
                     c.Nome = ExtrairValorDoCampo("nome", item);
-                    c.Idade = ExtrairValorDoCampo("idade", item);
+                    c.Nome = ExtrairValorDoCampo("idade", item);
                     c.Email = ExtrairValorDoCampo("email", item);
                     c.Telefone = ExtrairValorDoCampo("telefone", item);
                     c.Endereco = ExtrairValorDoCampo("endereco", item);
@@ -50,7 +50,6 @@ namespace RolêTopMVC.Repositorio
         private string PrepararRegistroCSV(Cliente cliente)
         {
             return $"tipo_usuario={cliente.TiposUsuario};nome={cliente.Nome};idade={cliente.Idade};email={cliente.Email};telefone={cliente.Telefone};endereco={cliente.Endereco};CPF={cliente.CPF};senha={cliente.Senha};";
-
         }
     }
 }

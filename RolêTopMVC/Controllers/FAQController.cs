@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Controllers
 {
     public class FAQController : Controller
     {
-        public IActionResult Index()
+                public IActionResult Index()
         {
-            ViewData["NomeView"] = "FAQ";
-            return View();
+            return View(new AgendamentoViewModel (){
+                NomeView = "FAQ"
+            });
         }
     }
 }

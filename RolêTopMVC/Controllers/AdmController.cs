@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Controllers
 {
-    public class AdmController : Controller
+    public class AdmController : AbstractController
     {
         public IActionResult Index()
         {
-            ViewData["NomeView"] = "ADM";
-            return View();
+            return View(new AgendamentoViewModel (){
+                NomeView = "ADM"
+            });
         }
     }
 }

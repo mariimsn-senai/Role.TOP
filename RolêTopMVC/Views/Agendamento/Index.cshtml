@@ -5,9 +5,9 @@
  <div class="all"></div>
  <br>  
 
-
 <div class="pacotes">
         <div class="tex">
+            <div class="Ps">
             
             <b>Pacote Simples</b>
             <br> 
@@ -22,10 +22,12 @@
             <br>
             
             
+            </div>
         </div>
         
         <div class="tex">
-        
+            <div class="PacotePadrao">
+
             <b>Pacote padrão</b>
             <br>
             <br>
@@ -41,9 +43,12 @@
             <br>
             
             
+            </div>
         </div>
 
         <div class="tex">
+            <div class="PacotePremium">
+
             
             <b>Pacote premium</b>
             <br>
@@ -59,14 +64,17 @@
             <br>
             <br>
             
-            </div> 
+            </div>
+             
             
         </div> 
     </div>
 </section>
 <br>
 
-    <label class="tex" for="Calendario"></div>
+    <div class="Calendario">
+    <label></div>
+
     <table >
     
         <caption class="mes">Setembro 2019</caption>
@@ -180,19 +188,24 @@
     
     </table>
 </div>    
+    </div>
 <br>
-<form name="data" action="" method="POST" class="ag">
+<form name="data" action='@Url.Action("GravarEvento", "Agendamento")' method="POST" class="ag">
+    <input type="hidden" name="id_pacote" value="@Model.CodigoPacote"/>
     <p>Data:</p>
     <p class="numero">
-    <input type="date" name="horario" required="required" >
+    <input type="time" name="horario" required="required" >
     <br />
     <p>Horário:</p>
     <p class="numero">
-    <input type="time" name="nome" required="required">
+    <input type="date" name="data" required="required">
     </p>
     <br />
+    <!--  INSERIR INPUT PARA SERVIÇOS -->
     <input type="submit" value="Enviar" />
+<a href='@Url.Action("GravarEvento", "Agendamento")' method="GET">
 </form>
+</a>
 
 <br>
 <br>

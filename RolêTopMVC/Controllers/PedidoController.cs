@@ -14,30 +14,32 @@ namespace RolêTopMVC.Controllers
     public class PedidoController : AbstractController
     {
         ClienteRepository clienteRepository = new ClienteRepository();
-        PedidoRepository pedidoRepository = new PedidoRepository();
-        
-
-
-        public IActionResult Registrar(ulong id)
+    
+        public IActionResult Registrar(int id)
         {
-            AgendamentoViewModel agendamentoViewModel= new AgendamentoViewModel();
+            AgendamentoViewModel avm= new AgendamentoViewModel();
 
-            switch (id)
-            {
-                case (uint)ValorPacotes.PacoteSimples:
-                    PacoteSimples ps = new PacoteSimples();
-                    agendamentoViewModel.PacoteSimples = ps;
-                    break;
-                case (uint)ValorPacotes.PacotePadrao:
-                    PacotePadrao pp = new PacotePadrao();
-                    agendamentoViewModel.PacotePadrao = pp;
-                    break;
-                case (uint)ValorPacotes.PacotePremium:
-                    PacotePremium prep = new PacotePremium();
-                    agendamentoViewModel.PacotePremium = prep;
-                    break;
-            }
-            return RedirectToAction("Index","Agendamento", agendamentoViewModel);
+            // switch (id)
+            // {
+            //     case (int) ValorPacotes.PacoteSimples:
+            //         avm.NomeView = "Simples";
+            //         PacoteSimples ps = new PacoteSimples();
+            //         avm.PacoteSimples = ps;
+            //         break;
+            //     case (int) ValorPacotes.PacotePadrao:
+            //         avm.NomeView = "Padrao";
+            //         PacotePadrao pp = new PacotePadrao();
+            //         avm.PacotePadrao = pp;
+            //         break;
+            //     case (int )ValorPacotes.PacotePremium:
+            //         avm.NomeView = "Premium";
+            //         PacotePremium prep = new PacotePremium();
+            //         avm.PacotePremium = prep;
+            //         break;
+            // }
+
+            avm.CodigoPacote = id;
+            return RedirectToAction("Index","Agendamento", avm);
         }
 
     }

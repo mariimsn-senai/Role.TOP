@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using RolêTopMVC.Models;
 
 namespace RolêTopMVC.Controllers
 {
     public class LoginImgController : Controller
     {
-        public IActionResult Index()
+                public IActionResult Index()
         {
-            ViewData["NomeView"] = "LoginImg";
-            return View();
+            return View(new AgendamentoViewModel (){
+                NomeView = "LoginImg"
+            });
         }
     }
 }
