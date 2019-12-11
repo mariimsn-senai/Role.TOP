@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\RolêTopMVC.csproj",
+  "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\RolêTopMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,108 +2961,113 @@
   "RootNamespace": "RolêTopMVC",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Adm\\Index.cshtml",
-      "TargetPath": "Views\\Adm\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Login\\Index.cshtml",
-      "TargetPath": "Views\\Login\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Shared\\Sucesso.cshtml",
-      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Shared\\Erro.cshtml",
-      "TargetPath": "Views\\Shared\\Erro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Agendamento\\Index.cshtml",
-      "TargetPath": "Views\\Agendamento\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Casa\\Index.cshtml",
-      "TargetPath": "Views\\Casa\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Contato\\Index.cshtml",
-      "TargetPath": "Views\\Contato\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Clientee2\\Index.cshtml",
-      "TargetPath": "Views\\Clientee2\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Pacote\\Index.cshtml",
-      "TargetPath": "Views\\Pacote\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\FAQ\\Index.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\FAQ\\Index.cshtml",
       "TargetPath": "Views\\FAQ\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Pagamento\\Index.cshtml",
-      "TargetPath": "Views\\Pagamento\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\Ambiente\\Index.cshtml",
-      "TargetPath": "Views\\Ambiente\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\PaginaDeSucesso\\Index.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Casa\\Index.cshtml",
+      "TargetPath": "Views\\Casa\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Agendamento\\Index.cshtml",
+      "TargetPath": "Views\\Agendamento\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_CookieConsentPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Ambiente\\Index.cshtml",
+      "TargetPath": "Views\\Ambiente\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\PaginaDeSucesso\\Index.cshtml",
       "TargetPath": "Views\\PaginaDeSucesso\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 4\\Role.TOP\\RolêTopMVC\\Views\\LoginImg\\Index.cshtml",
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Shared\\Sucesso.cshtml",
+      "TargetPath": "Views\\Shared\\Sucesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Adm\\Index.cshtml",
+      "TargetPath": "Views\\Adm\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Pagamento\\Index.cshtml",
+      "TargetPath": "Views\\Pagamento\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Clientee2\\Index.cshtml",
+      "TargetPath": "Views\\Clientee2\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Shared\\Erro.cshtml",
+      "TargetPath": "Views\\Shared\\Erro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Contato\\Index.cshtml",
+      "TargetPath": "Views\\Contato\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\LoginImg\\Index.cshtml",
       "TargetPath": "Views\\LoginImg\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Pacote2\\Index.cshtml",
+      "TargetPath": "Views\\Pacote2\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\44879682837\\Desktop\\role 5\\Role.TOP\\RolêTopMVC\\Views\\Pacote\\Index.cshtml",
+      "TargetPath": "Views\\Pacote\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

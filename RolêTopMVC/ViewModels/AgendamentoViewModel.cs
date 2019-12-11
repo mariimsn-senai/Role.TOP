@@ -3,7 +3,7 @@ using RolêTopMVC.ViewModels;
 
 namespace RolêTopMVC.Models
 {
-    public class AgendamentoViewModel : RespostasViewModel
+    public class AgendamentoViewModel : BaseViewModel
     {
         public string data {get;set;}
         

@@ -1,3 +1,4 @@
+    @model RolêTopMVC.ViewModels.DashboardViewModel
     <main>
     <h1>Página do administrador</h1>
     <h2>Pedidos:</h2>
@@ -12,36 +13,15 @@
                 </tr>
             </thead>
             <tbody>
+            @foreach(var produto in Model.Produto )
+                    {
                 <tr> 
-                    <td>Paulo Nunez Silva</td>
-                    <td>15/10/2019</td>
-                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
-                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
+                    <td>@produto.Cliente.Nome</td>
+                    <td>@produto.data</td>
+                        <td><a href='@Url.Action("Aprovar", "Pedido", new {id = @produto.Id})'><i class="fas fa-check"></i></a>
+                        <a href='@Url.Action("Recusar", "Pedido", new {id = @produto.Id})'><i class="fas fa-check"></i></a></td>
                 </tr>
-                <tr>
-                    <td>Antonip Nascimento</td>
-                    <td>16/10/2019</td>
-                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
-                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
-                </tr>
-                <tr>
-                    <td>Aline Flores</td>
-                    <td>17/10/2019</td>
-                    <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
-                        <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
-                </tr>
-                <tr>
-                        <td>Antonip Nascimento</td>
-                        <td>16/10/2019</td>
-                        <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
-                            <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
-                    </tr>
-                    <tr>
-                        <td>Aline Flores</td>
-                        <td>17/10/2019</td>
-                        <td><input class="botãoum" type="button" name="aceitar" value="Aceitar" alt="Aceitar">
-                            <input class="botãodois" type="button" name="recusar" value="Recusar" alt="Recusar"></td>
-                    </tr>
+                    }
             </tbody>
      </table>
 </div>      

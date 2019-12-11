@@ -6,6 +6,9 @@ namespace RolêTopMVC.Models
     public class Produto
     {
         public ulong Id {get;set;}
+
+
+        public Cliente Cliente {get;set;}
         public PacoteSimples pacotesimples {get;set;}
         public string Nome {get;set;}
         public double Valor {get;set;}
@@ -17,6 +20,8 @@ namespace RolêTopMVC.Models
         public string horario {get;set;}
 
         public string parcelas {get;set;}
+
+        public uint Status {get;set;}
 
         public Produto()
         {

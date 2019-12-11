@@ -38,7 +38,7 @@ namespace RolêTopMVC.Controllers
                     cliente.TiposUsuario = (uint) TiposUsuario.CLIENTE;
 
                     clienteRepository.Inserir(cliente);
-                    return View("Sucesso", new BaseViewModel()
+                    return View("Sucesso", new RespostasViewModel()
                     {
                         NomeView = "Cadastro",
                         UsuarioEmail = ObterUsuarioSession(),

@@ -13,6 +13,7 @@ namespace RolêTopMVC.Controllers
 
     public class PedidoController : AbstractController
     {
+        ProdutoRepository produtoRepository = new ProdutoRepository();
         ClienteRepository clienteRepository = new ClienteRepository();
     
         public IActionResult Registrar(int id)
@@ -42,5 +43,43 @@ namespace RolêTopMVC.Controllers
             return RedirectToAction("Index","Agendamento", avm);
         }
 
+
+        public IActionResult Aprovar (ulong id)
+        {
+            var pedido = produtoRepository.ObterPor(id);
+
+            if(produtoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else
+            {
+                return View("Erro", new RespostasViewModel("Não foi possível aprovar este pedido")
+                {
+                    NomeView = "Dashdoard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
+            }
+        }
+
+                public IActionResult Reprovar (ulong id)
+        {
+            var pedido = produtoRepository.ObterPor(id);
+
+            if(produtoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else
+            {
+                return View("Erro", new RespostasViewModel("Não foi possível reprovar este pedido")
+                {
+                    NomeView = "Dashdoard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                });
+            }
+        }
     }
 }

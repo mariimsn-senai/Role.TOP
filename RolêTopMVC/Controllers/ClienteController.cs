@@ -2,6 +2,7 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RolêTopMVC.Enums;
+using RolêTopMVC.Models;
 using RolêTopMVC.Repositorio;
 using RolêTopMVC.ViewModels;
 
@@ -62,7 +63,12 @@ namespace RolêTopMVC.Controllers
                     }
                     else
                     {
-                        return View("Erro" , new RespostasViewModel("Senha incorreta"));
+                        return View("Erro" , new RespostasViewModel(){
+                            Mensagem = "erro na senha",
+                            NomeView = "Login",
+                            UsuarioEmail= ObterUsuarioSession(),
+                            UsuarioNome= ObterUsuarioNomeSession()
+                        });
                     }
 
                 }

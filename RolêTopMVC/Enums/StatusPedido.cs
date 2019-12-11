@@ -2,8 +2,9 @@ namespace RolêTopMVC.Enums
 {
     public enum StatusPedido : uint
     {
-        PENDENTE = 0,
-        APROVADO = 1,
-        REPROVADO = 2
+        ACEITAR = 0,
+        RECUSAR = 1,
+        PENDENTE = 2,
+
     }
 }
